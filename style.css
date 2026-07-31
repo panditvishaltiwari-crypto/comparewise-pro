@@ -1,1 +1,338 @@
+/* ================================
+   CompareWise Premium Dark UI
+   Style CSS - Part 1
+================================ */
 
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080b14;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: rgba(8,11,20,0.95);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #00e5ff;
+}
+
+.logo span {
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00e5ff;
+}
+
+
+/* Hero Section */
+.hero {
+    padding: 90px 0;
+    text-align: center;
+    background:
+    radial-gradient(circle at top,#14213d,transparent 50%);
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color:#00e5ff;
+}
+
+.hero p {
+    max-width:700px;
+    margin: auto;
+    color:#b8c1d9;
+    font-size:18px;
+}
+
+
+/* Buttons */
+.btn {
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    border-radius:50px;
+    background:#00e5ff;
+    color:#000;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn:hover {
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(0,229,255,.3);
+}
+
+
+/* Cards Section */
+
+.cards {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin:60px 0;
+}
+
+.card {
+    background:#111827;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.card:hover {
+    transform:translateY(-8px);
+    border-color:#00e5ff;
+}
+
+.card h3 {
+    margin-bottom:15px;
+    color:#00e5ff;
+}
+
+.card p {
+    color:#b8c1d9;
+}
+
+
+/* Section Title */
+
+.section-title {
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2 {
+    font-size:36px;
+}
+
+.section-title p {
+    color:#aab3c5;
+}
+
+ 
+/* ================================
+   CompareWise Premium Dark UI
+   Style CSS - Part 2
+================================ */
+
+
+/* Forms */
+
+.form-box {
+    background:#111827;
+    padding:35px;
+    border-radius:20px;
+    max-width:600px;
+    margin:40px auto;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    background:#080b14;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:10px;
+    color:white;
+    outline:none;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+    border-color:#00e5ff;
+}
+
+
+/* Offer Buttons */
+
+.offer-btn {
+    display:block;
+    text-align:center;
+    padding:15px;
+    margin-top:15px;
+    background:#00e5ff;
+    color:#000;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.offer-btn:hover {
+    transform:scale(1.03);
+}
+
+
+/* Trust Section */
+
+.trust {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:60px 0;
+}
+
+.trust-box {
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    min-width:200px;
+}
+
+.trust-box h3 {
+    color:#00e5ff;
+    font-size:30px;
+}
+
+
+/* Footer */
+
+footer {
+    background:#05070d;
+    padding:40px 0;
+    margin-top:60px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer p {
+    color:#9ca3af;
+}
+
+footer a {
+    color:#00e5ff;
+    text-decoration:none;
+}
+
+
+/* Animation */
+
+.fade-up {
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .navbar {
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links {
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1 {
+        font-size:32px;
+    }
+
+    .hero p {
+        font-size:16px;
+    }
+
+    .cards {
+        grid-template-columns:1fr;
+    }
+
+    .trust {
+        flex-direction:column;
+        align-items:center;
+    }
+
+}
+
+
+/* Extra Small Mobile */
+
+@media(max-width:480px){
+
+    .container {
+        width:94%;
+    }
+
+    .hero {
+        padding:60px 0;
+    }
+
+    .btn {
+        width:100%;
+    }
+
+}
+/* End Part 1 */
