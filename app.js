@@ -1,6 +1,13 @@
-// Load Offers from config.js
+/* =================================
+   CompareWise Premium
+   App JavaScript
+================================= */
+
 
 document.addEventListener("DOMContentLoaded", function(){
+
+
+    // Load Offers
 
     const offerList = document.getElementById("offer-list");
 
@@ -26,15 +33,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }
 
-});/* =================================
-   CompareWise Premium
-   App JavaScript
-================================= */
 
 
-// Mobile Menu Toggle
-
-document.addEventListener("DOMContentLoaded", function(){
+    // Mobile Menu
 
     const menuBtn = document.querySelector(".menu-btn");
     const navLinks = document.querySelector(".nav-links");
@@ -50,55 +51,8 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 
-    // Smooth Scroll
 
-    const links = document.querySelectorAll("a[href^='#']");
-
-    links.forEach(link => {
-
-        link.addEventListener("click", function(e){
-
-            const target = document.querySelector(this.getAttribute("href"));
-
-            if(target){
-
-                e.preventDefault();
-
-                target.scrollIntoView({
-                    behavior:"smooth"
-                });
-
-            }
-
-        });
-
-    });
-
-
-
-    // Form Submit Message
-
-    const forms = document.querySelectorAll("form");
-
-    forms.forEach(form => {
-
-        form.addEventListener("submit", function(){
-
-            const btn = form.querySelector("button");
-
-            if(btn){
-
-                btn.innerHTML = "Submitting...";
-
-            }
-
-        });
-
-    });
-
-
-
-    // Current Year Footer
+    // Footer Year
 
     const year = document.querySelector("#year");
 
@@ -109,29 +63,29 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
 
-});
 
+    // Animation
 
+    const observer = new IntersectionObserver((entries)=>{
 
-/* Simple Fade Animation */
+        entries.forEach(entry=>{
 
-const observer = new IntersectionObserver((entries)=>{
+            if(entry.isIntersecting){
 
-    entries.forEach(entry=>{
+                entry.target.classList.add("fade-up");
 
-        if(entry.isIntersecting){
+            }
 
-            entry.target.classList.add("fade-up");
-
-        }
+        });
 
     });
 
-});
 
+    document.querySelectorAll(".card, .trust-box").forEach((item)=>{
 
-document.querySelectorAll(".card, .trust-box").forEach((item)=>{
+        observer.observe(item);
 
-    observer.observe(item);
+    });
+
 
 });
