@@ -1,4 +1,32 @@
-/* =================================
+// Load Offers from config.js
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const offerList = document.getElementById("offer-list");
+
+    if(offerList && typeof CONFIG !== "undefined"){
+
+        CONFIG.offers.forEach(function(offer){
+
+            const card = document.createElement("div");
+
+            card.className = "card";
+
+            card.innerHTML = `
+                <h3>${offer.name}</h3>
+                <p>Compare and find the best available option.</p>
+                <a href="${offer.url}" class="offer-btn">
+                    View Offer
+                </a>
+            `;
+
+            offerList.appendChild(card);
+
+        });
+
+    }
+
+});/* =================================
    CompareWise Premium
    App JavaScript
 ================================= */
